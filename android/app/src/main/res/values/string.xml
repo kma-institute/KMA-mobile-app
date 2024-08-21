@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KMA</string>
+    <string name="facebook_app_id">1020893479326936</string>
+    <string name="fb_login_protocol_scheme">ecab4c8b67426af90f5271d433826e43</string>
+    <string name="facebook_client_token">4dea683a297ac64862ff3ebbadd514ea</string>
+</resources>

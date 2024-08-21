@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "149451833753",
+    "project_id": "kma-app-2fd07",
+    "storage_bucket": "kma-app-2fd07.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149451833753:android:00246bc1515f40704c5308",
+        "android_client_info": {
+          "package_name": "com.stylemixthemes.masterstudyapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAfwdKFCSS86UV4NAabUBoWrPzUNcgOik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
