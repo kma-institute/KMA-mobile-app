@@ -68,15 +68,19 @@ class SocialsWidget extends StatelessWidget {
                       onPressed: state is LoadingAuthGoogleState
                           ? null
                           : () async {
-                              GoogleSignInProvider().signInGoogle().then((value) async {
+                              GoogleSignInProvider()
+                                  .signInGoogle()
+                                  .then((value) async {
                                 var ggAuth = await value.authentication;
                                 var ggAuthProfile = value.photoUrl;
-
+                                print('ggAuth: $ggAuth');
+                                print('idToken: ${ggAuth.idToken}');
+                                print('accessToken: ${ggAuth.accessToken}');
                                 if (ggAuthProfile != null) {
                                   BlocProvider.of<AuthBloc>(context).add(
                                     AuthSocialsEvent(
                                       providerType: 'google',
-                                      idToken: ggAuth.idToken!,
+                                      idToken: value.id,
                                       accessToken: ggAuth.accessToken!,
                                       photoUrl: await urlToFile(ggAuthProfile),
                                     ),
@@ -110,20 +114,25 @@ class SocialsWidget extends StatelessWidget {
                       onPressed: state is LoadingAuthFacebookState
                           ? null
                           : () async {
-                              final LoginResult result = await FacebookAuth.instance.login(
+                              final LoginResult result =
+                                  await FacebookAuth.instance.login(
                                 permissions: ['email', 'public_profile'],
                               );
 
                               if (result.status == LoginStatus.success) {
-                                final AccessToken accessToken = result.accessToken!;
+                                final AccessToken accessToken =
+                                    result.accessToken!;
 
-                                final userData = await FacebookAuth.instance.getUserData();
+                                final userData =
+                                    await FacebookAuth.instance.getUserData();
 
                                 BlocProvider.of<AuthBloc>(context).add(
                                   AuthSocialsEvent(
                                     providerType: 'facebook',
                                     accessToken: accessToken.token,
-                                    photoUrl: await urlToFile(userData['picture']['data']['url']),
+                                    photoUrl: await urlToFile(
+                                      userData['picture']['data']['url'],
+                                    ),
                                   ),
                                 );
                               }

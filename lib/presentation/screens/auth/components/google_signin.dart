@@ -12,6 +12,7 @@ class GoogleSignInProvider {
 
   Future<GoogleSignInAccount> signInGoogle() async {
     try {
+      await googleSignIn.signOut();
       return await googleSignIn.signIn().then((value) async {
         var ggAuth = value!;
         return ggAuth;

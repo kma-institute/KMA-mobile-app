@@ -44,30 +44,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBAfwdKFCSS86UV4NAabUBoWrPzUNcgOik',
-    appId: '1:149451833753:android:00246bc1515f40704c5308',
-    messagingSenderId: '149451833753',
-    projectId: 'kma-app-2fd07',
-    storageBucket: 'kma-app-2fd07.appspot.com',
+    apiKey: 'AIzaSyDAZU6BfF9mA_1MQsyFcXYAowYEKKwTmtE',
+    appId: '1:629869657780:android:a2e23041993cfbca7961e1',
+    messagingSenderId: '629869657780',
+    projectId: 'kma-app-5f04c',
+    storageBucket: 'kma-app-5f04c.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBq-UEs8cQpak7GheDv6KjVDW0E6Q2OQio',
-    appId: '1:149451833753:ios:d6c0d326f7df9db64c5308',
-    messagingSenderId: '149451833753',
-    projectId: 'kma-app-2fd07',
-    storageBucket: 'kma-app-2fd07.appspot.com',
+    apiKey: 'AIzaSyC-scv5gWnWRpH8Ak3eVACs23uFCltGvZI',
+    appId: '1:629869657780:ios:09f27f3d975665ff7961e1',
+    messagingSenderId: '629869657780',
+    projectId: 'kma-app-5f04c',
+    storageBucket: 'kma-app-5f04c.appspot.com',
     iosBundleId: 'com.stylemixthemes.masterstudyapp',
   );
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyD6ThJP3QdkMmGD9tmhQxkmFZ_Yei77aI0',
-    appId: '1:149451833753:web:a7e7bcbf04f29b1f4c5308',
-    messagingSenderId: '149451833753',
-    projectId: 'kma-app-2fd07',
-    authDomain: 'kma-app-2fd07.firebaseapp.com',
-    storageBucket: 'kma-app-2fd07.appspot.com',
-    measurementId: 'G-8LRXBQE0TT',
+    apiKey: 'AIzaSyAinuAZDdCICKOZ_lEMUTmLjbgc5vNFnn4',
+    appId: '1:629869657780:web:0ec6710c904a58397961e1',
+    messagingSenderId: '629869657780',
+    projectId: 'kma-app-5f04c',
+    authDomain: 'kma-app-5f04c.firebaseapp.com',
+    storageBucket: 'kma-app-5f04c.appspot.com',
+    measurementId: 'G-93KFFFQ3WK',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(

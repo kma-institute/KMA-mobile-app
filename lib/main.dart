@@ -53,7 +53,8 @@ void main() async {
       preferences.getString(PreferencesName.selectedLangAbbr) == '') {
     preferences.remove(PreferencesName.selectedLangAbbr);
   } else {
-    preferences.setString(PreferencesName.selectedLangAbbr, preferences.getString(PreferencesName.selectedLangAbbr)!);
+    preferences.setString(PreferencesName.selectedLangAbbr,
+        preferences.getString(PreferencesName.selectedLangAbbr)!,);
   }
 
   GoogleSignInProvider().initializeGoogleSignIn();
@@ -87,7 +88,8 @@ class MyAppState extends State<MyApp> {
     return MultiBlocProvider(
       providers: [
         BlocProvider<HomeSimpleBloc>(
-          create: (BuildContext context) => HomeSimpleBloc()..add(LoadHomeSimpleEvent()),
+          create: (BuildContext context) =>
+              HomeSimpleBloc()..add(LoadHomeSimpleEvent()),
         ),
         BlocProvider<FavoritesBloc>(
           create: (BuildContext context) => FavoritesBloc(),
@@ -108,7 +110,8 @@ class MyAppState extends State<MyApp> {
           create: (BuildContext context) => CourseBloc(),
         ),
         BlocProvider<LanguagesBloc>(
-          create: (BuildContext context) => LanguagesBloc()..add(LoadLanguagesEvent()),
+          create: (BuildContext context) =>
+              LanguagesBloc()..add(LoadLanguagesEvent()),
         ),
       ],
       child: OverlaySupport(
@@ -118,8 +121,10 @@ class MyAppState extends State<MyApp> {
           initialRoute: SplashScreen.routeName,
           debugShowCheckedModeBanner: false,
           navigatorKey: navigatorKey,
-          onGenerateRoute: (RouteSettings settings) => AppRoutes().generateRoute(settings, context),
-          onUnknownRoute: (RouteSettings settings) => AppRoutes().onUnknownRoute(settings, context),
+          onGenerateRoute: (RouteSettings settings) =>
+              AppRoutes().generateRoute(settings, context),
+          onUnknownRoute: (RouteSettings settings) =>
+              AppRoutes().onUnknownRoute(settings, context),
         ),
       ),
     );

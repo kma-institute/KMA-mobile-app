@@ -118,6 +118,8 @@ class MainScreenState extends State<MainScreenWidget> {
           iconData,
           height: 22.0,
           color: _getItemColor(index),
+          
+          
         ),
       );
 
